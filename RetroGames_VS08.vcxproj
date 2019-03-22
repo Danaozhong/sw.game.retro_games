@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>RetroGames</ProjectName>
+    <ProjectGuid>{5DB6192F-D2D3-4556-A285-73B82C1E2173}</ProjectGuid>
+    <RootNamespace>RetroGames</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ReferencePath>..\RetroGames;$(ReferencePath)</ReferencePath>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ReferencePath>..\RetroGames;$(ReferencePath)</ReferencePath>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="rgBase\audio\rgAudio.cpp" />
+    <ClCompile Include="rgBase\cast\rgCast.cpp" />
+    <ClCompile Include="rgBase\filesystem\rgFilesystem.cpp" />
+    <ClCompile Include="rgBase\gfx\rgGfx.cpp" />
+    <ClCompile Include="rgCommon\rgGlobals.cpp" />
+    <ClCompile Include="rgCommon\rgHighScore.cpp" />
+    <ClCompile Include="rgBase\input\rgInput.cpp" />
+    <ClCompile Include="rgBase\input\rgKeyboardInput.cpp" />
+    <ClCompile Include="rgMenu\rgMenu.cpp" />
+    <ClCompile Include="rgCommon\rgMisc.cpp" />
+    <ClCompile Include="rgBase\input\rgMouseInput.cpp" />
+    <ClCompile Include="rgBase\os\rgOsGfx.cpp" />
+    <ClCompile Include="rgBase\os\rgOsInput.cpp" />
+    <ClCompile Include="rgPakMan\rgPakMan.cpp" />
+    <ClCompile Include="rgPakMan\rgPakManDynamics.cpp" />
+    <ClCompile Include="rgPakMan\rgPakManGhosts.cpp" />
+    <ClCompile Include="rgPakMan\rgPakManGlobals.cpp" />
+    <ClCompile Include="rgPakMan\rgPakManMap.cpp" />
+    <ClCompile Include="rgPakMan\rgPakManOutput.cpp" />
+    <ClCompile Include="rgPakMan\rgPakManTimings.cpp" />
+    <ClCompile Include="rgSnake\rgSnake.cpp" />
+    <ClCompile Include="rgBase\timedriver\rgTimeDriver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\fmod\fmod.h" />
+    <ClInclude Include="lib\fmod\fmod.hpp" />
+    <ClInclude Include="lib\fmod\fmod_codec.h" />
+    <ClInclude Include="lib\fmod\fmod_dsp.h" />
+    <ClInclude Include="lib\fmod\fmod_errors.h" />
+    <ClInclude Include="lib\fmod\fmod_memoryinfo.h" />
+    <ClInclude Include="lib\fmod\fmod_output.h" />
+    <ClInclude Include="rgBase\audio\rgAudio.h" />
+    <ClInclude Include="rgBase\cast\rgCast.h" />
+    <ClInclude Include="rgBase\os\rgCharSet.h" />
+    <ClInclude Include="rgBase\filesystem\rgFilesystem.h" />
+    <ClInclude Include="rgBase\gfx\rgGfx.h" />
+    <ClInclude Include="rgCommon\rgGlobals.h" />
+    <ClInclude Include="rgCommon\rgHighScore.h" />
+    <ClInclude Include="rgBase\input\rgInput.h" />
+    <ClInclude Include="rgBase\input\rgKeyboardInput.h" />
+    <ClInclude Include="rgMenu\rgMenu.h" />
+    <ClInclude Include="rgCommon\rgMisc.h" />
+    <ClInclude Include="rgBase\input\rgMouseInput.h" />
+    <ClInclude Include="rgBase\os\rgOsGfx.h" />
+    <ClInclude Include="rgBase\os\rgOsInput.h" />
+    <ClInclude Include="rgPakMan\rgPakMan.h" />
+    <ClInclude Include="rgPakMan\rgPakManDynamics.h" />
+    <ClInclude Include="rgPakMan\rgPakManGhosts.h" />
+    <ClInclude Include="rgPakMan\rgPakManGlobals.h" />
+    <ClInclude Include="rgPakMan\rgPakManMap.h" />
+    <ClInclude Include="rgPakMan\rgPakManOutput.h" />
+    <ClInclude Include="rgPakMan\rgPakManStructures.h" />
+    <ClInclude Include="rgPakMan\rgPakManTimings.h" />
+    <ClInclude Include="rgSnake\rgSnake.h" />
+    <ClInclude Include="rgBase\structures\rgStructures.h" />
+    <ClInclude Include="rgBase\timedriver\rgTimeDriver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rgBase\audio\fmodex.dll" />
+    <None Include="rgBase\audio\fmodexL.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\fmod\fmodex_vc.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
